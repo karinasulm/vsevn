@@ -24755,19 +24755,12 @@
 })();
 
 // Полоса прокрутки в шапке
-
 let scrollHeight = Math.max(
   document.body.scrollHeight, document.documentElement.scrollHeight,
   document.body.offsetHeight, document.documentElement.offsetHeight,
   document.body.clientHeight, document.documentElement.clientHeight
 );
-
-console.log(scrollHeight);
-
 scrollHeight = document.documentElement.scrollHeight;
-
-console.log(scrollHeight);
-
 const percentScrollDiv = document.querySelector('.percent-scroll');
 document.onscroll = () => {
   percentScrollDiv.style.width = `${1.09*document.documentElement.scrollWidth*window.pageYOffset/scrollHeight}px`;

@@ -4553,26 +4553,27 @@ header nav ul.dropdown-list::-webkit-scrollbar-track {
 .inputs__label > span {
     transition: all 0.2s linear 0s;
     position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+    left: 0;
+    top: -25px;
+    // transform: translate(0, -50%);
     pointer-events: none;
     z-index: 10;
 }
-@media (min-width: 101.875em) {
-    .inputs__label > span {
-        left: 1.375rem;
-    }
-}
-@media (min-width: 20em) and (max-width: 101.875em) {
-    .inputs__label > span {
-        left: clamp( 0.9375rem , 0.830629771rem    +    0.534351145vw , 1.375rem );
-    }
-}
-@media (max-width: 20em) {
-    .inputs__label > span {
-        left: 0.9375rem;
-    }
-}
+// @media (min-width: 101.875em) {
+//     .inputs__label > span {
+//         left: 1.375rem;
+//     }
+// }
+// @media (min-width: 20em) and (max-width: 101.875em) {
+//     .inputs__label > span {
+//         left: clamp( 0.9375rem , 0.830629771rem    +    0.534351145vw , 1.375rem );
+//     }
+// }
+// @media (max-width: 20em) {
+//     .inputs__label > span {
+//         left: 0.9375rem;
+//     }
+// }
 @media (min-width: 101.875em) {
     .inputs__row--three .inputs__label:last-child span {
         font-size: 1.05rem;
@@ -4588,26 +4589,26 @@ header nav ul.dropdown-list::-webkit-scrollbar-track {
         font-size: 0.875rem;
     }
 }
-.inputs__label._form-focus > span {
-    left: 0;
-    top: 0;
-    transform: translate(0, -100%);
-}
-@media (min-width: 101.875em) {
-    .inputs__label._form-focus > span {
-        padding-bottom: 0.5rem;
-    }
-}
-@media (min-width: 20em) and (max-width: 101.875em) {
-    .inputs__label._form-focus > span {
-        padding-bottom: clamp( 0.3125rem , 0.2666984733rem    +    0.2290076336vw , 0.5rem );
-    }
-}
-@media (max-width: 20em) {
-    .inputs__label._form-focus > span {
-        padding-bottom: 0.3125rem;
-    }
-}
+// .inputs__label._form-focus > span {
+//     left: 0;
+//     top: 0;
+//     transform: translate(0, -100%);
+// }
+// @media (min-width: 101.875em) {
+//     .inputs__label._form-focus > span {
+//         padding-bottom: 0.5rem;
+//     }
+// }
+// @media (min-width: 20em) and (max-width: 101.875em) {
+//     .inputs__label._form-focus > span {
+//         padding-bottom: clamp( 0.3125rem , 0.2666984733rem    +    0.2290076336vw , 0.5rem );
+//     }
+// }
+// @media (max-width: 20em) {
+//     .inputs__label._form-focus > span {
+//         padding-bottom: 0.3125rem;
+//     }
+// }
 .inputs__label._form-focus::after {
     transform: scale(1);
 }
