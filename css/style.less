@@ -14587,11 +14587,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: transparent;
     transition: background-color .3s ease;
     &:hover {
-        background-color: @color-red;
-        color: #fff;
-        .roll-up__arrow {
-            fill: #ffffff;
-        }
+        // background-color: @color-red;
+        // color: #fff;
+        // .roll-up__arrow {
+        //     fill: #ffffff;
+        // }
     }
 }
 
@@ -14600,7 +14600,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .roll-up.active {
+    .roll-up__btn {
+        background-color: @color-red;
+        color: #fff;
+    }
     .roll-up__arrow {
         transform: rotate(180deg);
+        fill: #ffffff;
     } 
 }

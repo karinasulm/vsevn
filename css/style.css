@@ -14245,16 +14245,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
-.roll-up__btn:hover {
-  background-color: #d7212f;
-  color: #fff;
-}
-.roll-up__btn:hover .roll-up__arrow {
-  fill: #ffffff;
-}
 #tabs.hidden {
   display: none;
 }
+.roll-up.active .roll-up__btn {
+  background-color: #d7212f;
+  color: #fff;
+}
 .roll-up.active .roll-up__arrow {
   transform: rotate(180deg);
+  fill: #ffffff;
 }
