@@ -24141,7 +24141,7 @@
           }));
       }
       function fa(e, t, i = !0) {
-        console.dir(t),
+        // console.dir(t),
           e.scrollWidth > e.clientWidth
             ? (t._tippy.enable(),
               t._tippy.setContent(e.value),
@@ -24765,6 +24765,7 @@ const percentScrollDiv = document.querySelector('.percent-scroll');
 document.onscroll = () => {
   percentScrollDiv.style.width = `${1.09*document.documentElement.scrollWidth*window.pageYOffset/scrollHeight}px`;
 };
+
 // Скрытие tabs
 const tabs = document.querySelector("#tabs");
 const rollUpButton = document.querySelector("#roll-up-btn");
@@ -24778,3 +24779,30 @@ rollUpButton.addEventListener("click", function () {
     rollUpButton.querySelector("span").innerHTML = "Скрыть поисковую панель";
   }
 })
+
+// Селекторы Тест
+const tabsInputs = tabs.querySelectorAll(".input");
+for (let i = 0; i < tabsInputs.length; i++) {
+  tabsInputs[i].addEventListener("change", function () {
+    // Добавляем кнопку удаления при заполнении поля и убираем кнопку при очищении
+    if (tabsInputs[i].value != "") {
+      if (tabsInputs[i].parentElement.querySelector(".cancel").classList.contains("active") == false) {
+        tabsInputs[i].parentElement.querySelector(".cancel").classList.add("active");
+      }
+    } else {
+      if (tabsInputs[i].parentElement.querySelector(".cancel").classList.contains("active") == true) {
+        tabsInputs[i].parentElement.querySelector(".cancel").classList.remove("active");
+      }
+    }
+  });
+}
+const tabsSelects = tabs.querySelectorAll(".select_form");
+for (let i = 0; i < tabsSelects.length; i++) {
+  let tabsSelectsButtons = tabsSelects[i].querySelectorAll(".select__option");
+  for (let j = 0; j < tabsSelectsButtons.length; j++) {
+    tabsSelectsButtons[j].addEventListener("click", function () {
+      let currentValueOfSelect = tabsSelectsButtons[j].innerHTML;
+      console.log(currentValueOfSelect);
+    })
+  }
+}

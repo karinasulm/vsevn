@@ -14258,3 +14258,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   transform: rotate(180deg);
   fill: #ffffff;
 }
+.inputs__label {
+  position: relative;
+}
+.cancel {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #aaa;
+  cursor: pointer;
+}
+.cancel.active {
+  display: block;
+}
+.cancel:hover {
+  background-color: #333;
+}
