@@ -14213,3 +14213,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-medium-zoom .lg-outer.lg-grabbing img.lg-object {
   cursor: zoom-out;
 }
+.roll-up {
+  width: 65%;
+  margin: 20px auto 0 auto;
+  border: 2px solid #d7212f;
+  border-radius: 10px;
+  text-align: center;
+  color: #d7212f;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.roll-up__btn {
+  width: 100%;
+  padding: 14px 0;
+}
+.roll-up__btn:hover {
+  background-color: #d7212f;
+  color: #fff;
+}
+#tabs.hidden {
+  display: none;
+}

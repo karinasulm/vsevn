@@ -24765,3 +24765,9 @@ const percentScrollDiv = document.querySelector('.percent-scroll');
 document.onscroll = () => {
   percentScrollDiv.style.width = `${1.09*document.documentElement.scrollWidth*window.pageYOffset/scrollHeight}px`;
 };
+// Скрытие tabs
+const tabs = document.querySelector("#tabs");
+const rollUpButton = document.querySelector("#roll-tab-btn");
+rollUpButton.addEventListener("click", function () {
+  tabs.classList.toggle("hidden");
+})
