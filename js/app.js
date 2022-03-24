@@ -24767,7 +24767,14 @@ document.onscroll = () => {
 };
 // Скрытие tabs
 const tabs = document.querySelector("#tabs");
-const rollUpButton = document.querySelector("#roll-tab-btn");
+const rollUpButton = document.querySelector("#roll-up-btn");
+const rollUp = document.querySelector(".roll-up");
 rollUpButton.addEventListener("click", function () {
   tabs.classList.toggle("hidden");
+  rollUp.classList.toggle("active");
+  if (tabs.classList.contains("hidden")) {
+    rollUpButton.querySelector("span").innerHTML = "Показать поисковую панель";
+  } else {
+    rollUpButton.querySelector("span").innerHTML = "Скрыть поисковую панель";
+  }
 })

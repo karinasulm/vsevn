@@ -14214,7 +14214,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   cursor: zoom-out;
 }
 .roll-up {
-  width: 65%;
+  position: relative;
+  width: 100%;
+  max-width: 685px;
   margin: 20px auto 0 auto;
   border: 2px solid #d7212f;
   border-radius: 10px;
@@ -14223,14 +14225,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   font-size: 1.2rem;
   font-weight: 700;
 }
+.roll-up__arrow {
+  position: absolute;
+  top: calc(50% - 10px);
+  width: 20px;
+  fill: #d7212f;
+  transition: transform 0.3s ease;
+}
+.roll-up__arrow--left {
+  left: 15px;
+}
+.roll-up__arrow--right {
+  right: 15px;
+}
 .roll-up__btn {
+  position: relative;
   width: 100%;
   padding: 14px 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 .roll-up__btn:hover {
   background-color: #d7212f;
   color: #fff;
 }
+.roll-up__btn:hover .roll-up__arrow {
+  fill: #ffffff;
+}
 #tabs.hidden {
   display: none;
+}
+.roll-up.active .roll-up__arrow {
+  transform: rotate(180deg);
 }

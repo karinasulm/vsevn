@@ -14552,7 +14552,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .roll-up {
-    width: 65%;
+    position: relative;
+    width: 100%;
+    max-width: 685px;
     margin: 20px auto 0 auto;
     border: 2px solid @color-red;
     border-radius: 10px;
@@ -14562,15 +14564,43 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-weight: 700;
 }
 
+.roll-up__arrow {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 20px;
+    fill: @color-red;
+    transition: transform .3s ease;
+}
+
+.roll-up__arrow--left {
+    left: 15px;
+}
+
+.roll-up__arrow--right {
+    right: 15px;
+}
+
 .roll-up__btn {
+    position: relative;
     width: 100%;
     padding: 14px 0;
+    background-color: transparent;
+    transition: background-color .3s ease;
     &:hover {
         background-color: @color-red;
         color: #fff;
+        .roll-up__arrow {
+            fill: #ffffff;
+        }
     }
 }
 
 #tabs.hidden {
     display: none;
+}
+
+.roll-up.active {
+    .roll-up__arrow {
+        transform: rotate(180deg);
+    } 
 }
