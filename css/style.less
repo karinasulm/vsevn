@@ -14559,7 +14559,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     max-width: 685px;
     margin: 20px auto 0 auto;
     border: 2px solid @color-red;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     color: @color-red;
     font-size: 1.15rem;
@@ -14572,6 +14572,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     width: 20px;
     fill: @color-red;
     transition: transform .3s ease;
+    transform: rotate(180deg);
 }
 
 .roll-up__arrow--left {
@@ -14600,7 +14601,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         color: #fff;
     }
     .roll-up__arrow {
-        transform: rotate(180deg);
+        transform: rotate(0);
         fill: #ffffff;
     } 
 }
