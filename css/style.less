@@ -14612,6 +14612,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .cancel {
     display: none;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
     position: absolute;
     right: 15px;
@@ -14622,9 +14624,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: #aaa;
     cursor: pointer;
     &.active {
-        display: block;
+        display: flex;
     }
     &:hover {
         background-color: #333;
+    }
+    svg {
+        width: 12px;
+        height: auto;
     }
 }

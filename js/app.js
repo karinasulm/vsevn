@@ -24788,6 +24788,10 @@ for (let i = 0; i < tabsInputs.length; i++) {
     if (tabsInputs[i].value != "") {
       if (tabsInputs[i].parentElement.querySelector(".cancel").classList.contains("active") == false) {
         tabsInputs[i].parentElement.querySelector(".cancel").classList.add("active");
+        tabsInputs[i].parentElement.querySelector(".cancel").addEventListener("click", function () {
+          tabsInputs[i].value = "";
+          tabsInputs[i].parentElement.querySelector(".cancel").classList.remove("active");
+        });
       }
     } else {
       if (tabsInputs[i].parentElement.querySelector(".cancel").classList.contains("active") == true) {
@@ -24802,7 +24806,15 @@ for (let i = 0; i < tabsSelects.length; i++) {
   for (let j = 0; j < tabsSelectsButtons.length; j++) {
     tabsSelectsButtons[j].addEventListener("click", function () {
       let currentValueOfSelect = tabsSelectsButtons[j].innerHTML;
-      console.log(currentValueOfSelect);
+      if (currentValueOfSelect != "") {
+        if (tabsSelects[i].parentElement.querySelector(".cancel").classList.contains("active") == false) {
+          tabsSelects[i].parentElement.querySelector(".cancel").classList.add("active");
+          tabsSelects[i].parentElement.querySelector(".cancel").addEventListener("click", function () {
+            tabsSelects[i].parentElement.querySelector(".cancel").classList.remove("active");
+            tabsSelects[i].parentElement.querySelector("input").value = "";
+          });
+        }
+      }
     })
   }
 }
